@@ -2,13 +2,13 @@ import { useEffect, useState } from "react";
 import styles from "./card.module.css";
 import { useToken, useValueSearch, useValueSelector } from "./context";
 
-export default function Cards() {
+export default function Cards({choose}) {
   const { accessToken } = useToken();
-  const { valueSearch } = useValueSearch();
+  const { valueSearch,setValueSearch } = useValueSearch();
   const [dataService, setDataService] = useState([]);
   const [loading, setLoading] = useState(false);
   async function setAtDataBase(serviceId) {
-    const id = "66564f69e4c3cf8292ffe1fb";
+    
     try {
       const response = await fetch("http://localhost:3000/cart", {
         method: "POST",

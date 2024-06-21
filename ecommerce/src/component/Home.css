@@ -1,0 +1,8 @@
+.home-container1{
+    position: relative;
+}
+.chatbutton{
+    position: absolute;
+    top:50%;
+    left: -10px;
+}

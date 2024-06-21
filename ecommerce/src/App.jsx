@@ -9,6 +9,7 @@ import { TokenProvider } from "./component/context.jsx";
 import SignInUsre from "./component/signinuser.jsx";
 import SignUpUser from "./component/signupuser.jsx";
 import Homeprovider from "./component/homeprovider.jsx";
+import Chatbot from "./component/chatbot.jsx";
 
 function App() {
   const [isAuth, setAuth] = useState(false);
@@ -52,6 +53,12 @@ function App() {
                 }
               />
             }
+               {
+              <Route
+                path="/Chatbot"
+                element={<Chatbot/>}
+              />
+            }
           </Routes>
         </BrowserRouter>
       </TokenProvider>
@@ -60,8 +67,3 @@ function App() {
 }
 
 export default App;
-{
-  /* {<Route path='/Home'>
-      {isAuth ? <Home/>: <Navigate  to ="/signin" />}
-      </Route>} */
-}
